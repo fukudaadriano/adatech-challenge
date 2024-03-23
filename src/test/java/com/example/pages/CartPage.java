@@ -26,12 +26,20 @@ public class CartPage {
     @FindBy(css = ".shopping_cart_badge")
     WebElement cartBadge;
 
+    @FindBy(id = "checkout")
+    WebElement checkoutButton;
+
+
     public List<WebElement> itemsCartList() {
         return cartList;
     }
 
     public void quantityCartBadge() {
         cartBadge.getText();
+    }
+
+    public void goToCheckout() {
+        checkoutButton.click();
     }
 
 }
